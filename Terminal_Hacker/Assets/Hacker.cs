@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Hacker : MonoBehaviour {
 
+	// Game configuration data
+	string[] level1Passwords = { "books", "aisle", 	"shelf", "password", "font", "borrow" };
+	string[] level2Passwords = { "handcuffs", "guns", "officer", "prison", "jailbreak", "arrest" };
+	string[] level3Passwords = { "mars", "moon", "stars", "calipso", "curiosity", "satellite" };
+
+	// Game state
 	int level;
 	enum Screen { MainMenu, Password, Win };
 	Screen currentScreen;
@@ -46,19 +52,19 @@ public class Hacker : MonoBehaviour {
 		if(input == "1")
 		{
 			level = 1;
-			password = "bookshelf";
+			password = level1Passwords[2];
 			StartGame();
 		}
 		else if(input == "2")
 		{
 			level = 2;
-			password = "jailbreak";
+			password = level2Passwords[4];
 			StartGame();
 		}
 		else if(input == "3")
 		{
 			level = 3;
-			password = "curiosity";
+			password = level3Passwords[1];
 			StartGame();
 		}
 		else if(input == "007")
