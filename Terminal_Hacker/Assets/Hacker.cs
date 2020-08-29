@@ -5,8 +5,7 @@ using UnityEngine;
 public class Hacker : MonoBehaviour {
 
 	void Start () {
-		string greetingName = "Hugo";
-		ShowMainMenu(greetingName);
+		ShowMainMenu("Hugo");
 	}
 
 	void ShowMainMenu(string greetingName) {
@@ -18,8 +17,8 @@ public class Hacker : MonoBehaviour {
 		Terminal.WriteLine("Press 3 for the NASA\n");
 		Terminal.WriteLine("Enter your selection: ");
 	}
-	
-	void Update () {
-		
+
+	void OnUserInput(string input) {
+		print(input);
 	}
 }
