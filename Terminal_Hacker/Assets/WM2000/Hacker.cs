@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Hacker : MonoBehaviour {
 
-	// Use this for initialization
 	void Start () {
+		string greeting = "Hello Hugo!";
+		Terminal.WriteLine(greeting);
 		ShowMainMenu();
 	}
 
@@ -17,7 +18,6 @@ public class Hacker : MonoBehaviour {
 		Terminal.WriteLine("Enter your selection: ");
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		
 	}
