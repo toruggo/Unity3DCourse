@@ -5,12 +5,13 @@ using UnityEngine;
 public class Hacker : MonoBehaviour {
 
 	void Start () {
-		string greeting = "Hello Hugo!";
-		Terminal.WriteLine(greeting);
-		ShowMainMenu();
+		string greetingName = "Hugo";
+		ShowMainMenu(greetingName);
 	}
 
-	void ShowMainMenu() {
+	void ShowMainMenu(string greetingName) {
+		Terminal.ClearScreen();
+		Terminal.WriteLine("Hello " + greetingName + "!");
 		Terminal.WriteLine("What would you like to hack into?\n");
 		Terminal.WriteLine("Press 1 for the local library");
 		Terminal.WriteLine("Press 2 for the police station");
