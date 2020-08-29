@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Hacker : MonoBehaviour {
 
+	int level;
+
 	void Start ()
 	{
 		ShowMainMenu();
@@ -27,23 +29,31 @@ public class Hacker : MonoBehaviour {
 		}
 		if(input == "1")
 		{
-			print("You chose the library");
+			level = 1;
+			StartGame();
 		}
 		else if(input == "2")
 		{
-			print("You chose the police station");
+			level = 2;
+			StartGame();
 		}
 		else if(input == "3")
 		{
-			print("You chose NASA");
+			level = 3;
+			StartGame();
 		}
 		else if(input == "007")
 		{
-			print("Please select a level, Mr Bond!");
+			Terminal.WriteLine("Please select a level, Mr Bond!");
 		}
 		else
 		{
-			print("There's no level " + input + ". Please chose a valid level!");
+			Terminal.WriteLine("There's no level " + input + ". Please chose a valid level!");
 		}
+	}
+
+	void StartGame()
+	{
+		Terminal.WriteLine("You have chosen level " + level);
 	}
 }
