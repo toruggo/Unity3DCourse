@@ -5,6 +5,8 @@ using UnityEngine;
 public class Hacker : MonoBehaviour {
 
 	int level;
+	enum Screen { MainMenu, Password, Win };
+	Screen currentScreen = Screen.MainMenu;
 
 	void Start ()
 	{
@@ -54,6 +56,8 @@ public class Hacker : MonoBehaviour {
 
 	void StartGame()
 	{
+		currentScreen = Screen.Password;
 		Terminal.WriteLine("You have chosen level " + level);
+		Terminal.WriteLine("Please enter your password: ");
 	}
 }
