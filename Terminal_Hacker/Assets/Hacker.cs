@@ -6,7 +6,7 @@ public class Hacker : MonoBehaviour {
 
 	int level;
 	enum Screen { MainMenu, Password, Win };
-	Screen currentScreen = Screen.MainMenu;
+	Screen currentScreen;
 
 	void Start ()
 	{
@@ -15,6 +15,7 @@ public class Hacker : MonoBehaviour {
 
 	void ShowMainMenu()
 	{
+		currentScreen = Screen.MainMenu;
 		Terminal.ClearScreen();
 		Terminal.WriteLine("What would you like to hack into?\n");
 		Terminal.WriteLine("Press 1 for the local library");
