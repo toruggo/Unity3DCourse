@@ -1,9 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Rocket : MonoBehaviour {
 
+	// todo finish lighting bug
 	[SerializeField] float rcsThrust = 100f;
 	[SerializeField] float mainThrust = 100f;
 	Rigidbody rigidBody;
@@ -27,10 +27,14 @@ public class Rocket : MonoBehaviour {
 		{
 			case "Friendly":
 				// do nothing
-				print("OK");
+				break;
+			case "Finish":
+				print("Hit finish");
+				SceneManager.LoadScene(1);
 				break;
 			default:
 				print("ded");
+				SceneManager.LoadScene(0);
 				// kill player
 				break;
 		}
